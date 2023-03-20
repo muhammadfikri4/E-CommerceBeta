@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuhStore - History</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
+</head>
+<body style="background-color: #e3f2fd;">
+    
+      <!-- nav start -->
+  <nav class="navbar navbar-expand-lg sticky-top " style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-b" href="../index.html">
+        <img src="../img/logo.png" alt="" width="50px" class="d-inline-block">MuhStore
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Mode
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Light</a></li>
+              
+              <li><a class="dropdown-item" href="#">Dark</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../keranjang/keranjang.html">Keranjang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../akun/signin.html">Akun</a>
+          </li>
+          
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-secondary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- nav end -->
+
+  <div class="container-fluid text-center">
+    <i class="mt-5">Anda belum pernah melakukan pembelian</i>
+
+  </div>
+
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+  const search = document.querySelector("#search");
+const brand = document.querySelector("#brand");
+const mode = document.querySelector("#mode");
+const keranjang = document.querySelector("#keranjang");
+const history = document.querySelector("#history");
+const akun = document.querySelector("#akun");
+
+
+const dropItemLight = document.getElementsByClassName('dropdown-item')[0];
+const dropItemDark = document.getElementsByClassName('dropdown-item')[1];
+const nav1 = document.getElementsByTagName("nav")[0];
+
+dropItemDark.addEventListener('click', function() {
+
+
+
+  nav1.classList.add("bg-dark");
+  brand.classList.add("text-light");
+  mode.classList.add("text-light");
+  keranjang.classList.add("text-light");
+  history.classList.add("text-light");
+  akun.classList.add("text-light");
+  document.body.classList.add("bg-dark");
+  search.classList.replace("btn-outline-secondary", "btn-outline-light");
+
+
+
+
+});
+
+dropItemLight.addEventListener('click', function() {
+
+
+
+nav1.classList.remove("bg-dark");
+brand.classList.remove("text-light");
+mode.classList.remove("text-light");
+keranjang.classList.remove("text-light");
+history.classList.remove("text-light");
+akun.classList.remove("text-light");
+document.body.classList.remove("bg-dark");
+search.classList.replace("btn-outline-light", "btn-outline-secondary");
+})
+
+</script>
+</body>
+</html>
